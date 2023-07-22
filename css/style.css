@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Teko&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Configuration Of NavBar */
+.navBar {
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+.navBar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+.navBar ul {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 150px;
+}
+.navBar ul li {
+  list-style: none;
+  font-size: 25px;
+}
+.navBar ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 2px 30px;
+}
+.navBar ul li a:hover {
+  font-weight: bold;
+}
+/* End Of NavBar */
+/* Configuring Home Section */
+#home {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 50px;
+  height: 600px;
+}
+#home::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background: url("../img/background.jpg") no-repeat center center/cover;
+  height: 642px;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.99;
+}
+
+#home p {
+  font-size: 25px;
+  font-weight: bold;
+}
+#home .btn {
+  width: 20%;
+  padding: 5px;
+  margin: 15px;
+  background: grey;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+#home .btn:hover {
+  color: black;
+  border: 2px solid white;
+  font-weight: bold;
+}
+/* Home Section Ends */
+
+/* Services Section Starts */
+#services {
+  display: flex;
+  margin: 50px 10px;
+}
+.box{
+    padding: 34px;
+    margin: 5px 10px;
+    border: 2px solid greenyellow;
+    border-radius: 28px;
+    background: #f2f2f2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#services .box img{
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    margin: auto;
+    display: block;
+}
+.para{
+  font-family: 'Poppins', sans-serif;
+}
+/* Services Section Ends */
+/* clients Section Starts */
+.clients-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 350px;
+}
+.clients-container::before{
+  content: "";
+  position: absolute;
+  background: url("../img/background.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+.container{
+  display: flex;
+  margin: 20px;
+}
+.container img{
+  height: 150px;
+  width: 150px;
+  padding: 10px 20px;
+  z-index: -1;
+}
+/* client Section Ends */
+/* Contact Section starts*/
+#contact{
+  position: relative;
+  margin: 20px 0px;
+}
+
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background: url('https://images.unsplash.com/photo-1560264357-8d9202250f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80') no-repeat center center/cover;
+}
+
+#contact-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+#contact-box form{
+  width: 70%;
+}
+.form-group label{
+  font-size: 25px;
+}
+#contact-box input,#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+}
+#contact-box input[type=submit]{
+  width: 20%;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+/* Contact Section Ends */
+footer{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px;
+  font-size: 25px;
+}
+/* media query with max 900px and min 840px*/
+@media screen and (max-width:900px) and (min-width:840px) {
+  /* resizing btn*/
+  #home .btn{
+    font-size: 20px;
+  }
+  /* resizing font */
+  #home p{
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  /* resiziing image */
+  .box img{
+    width: 130px !important;
+    height: 130px !important;
+  }
+  /* resizing font */
+  .box p{
+    font-size: 15px;
+  }
+  /* resized margin and padding */
+  .box{
+    padding: 5px;
+    margin: 5px 5px;
+  }
+  /* resized Margin */
+  #services {
+    display: flex;
+    margin: 20px 5px;
+  }
+  /* resized image's padding */
+  .container img{
+    padding: 10px 10px;
+  }
+  /* Increased Form Width */
+  #contact-box form{
+    width: 70%;
+  }
+}
+@media screen and (max-width:839px) and (min-width:690px){
+  /* resizing btn*/
+  #home .btn{
+    font-size: 20px;
+  }
+  /* resizing font */
+  #home p{
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  /* resiziing image */
+  .box img{
+    width: 110px !important;
+    height: 110px !important;
+  }
+  /* resizing font */
+  .box p{
+    font-size: 15px;
+  }
+  /* resized margin and padding */
+  .box{
+    padding: 5px;
+    margin: 5px 5px;
+  }
+  /* resized Margin */
+  #services {
+    display: flex;
+    margin: 20px 5px;
+  }
+  /* resized image's padding */
+  .container img{
+    width: 130px !important;
+    height: 130px !important;
+    padding: 5px 5px;
+  }
+  /* Increased Form Width */
+  #contact-box form{
+    width: 80%;
+  }
+}
+@media screen and (max-width:689px) and (min-width:550px){
+  *{
+    font-size: 18px;
+  }
+  .center{
+    font-size: 1.5rem !important;
+  }
+  .h-primary{
+    font-size: 1.5rem !important;
+  }
+  /* resizing btn*/
+  #home .btn{
+    font-size: 20px;
+  }
+  /* resizing font */
+  #home p{
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  /* resizing height */
+  .clients-container{
+    height: 300px;
+  }
+  /* resiziing image */
+  .box img{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  /* resizing font */
+  .box p{
+    font-size: 12px;
+  }
+  /* resized margin and padding */
+  .box{
+    padding: 5px;
+    margin: 5px 5px;
+  }
+  /* resized Margin */
+  #services {
+    display: flex;
+    margin: 20px 5px;
+  }
+  /* using flex-wrap */
+  /* .container{
+    
+  } */
+  /* resized image's padding */
+  .container img{
+    width: 90px;
+    height: 90px;
+    padding: 5px 5px;
+    flex-wrap: wrap;
+  }
+  /* Increased Form Width */
+  #contact-box form{
+    width: 80%;
+  }
+}
+@media screen and (max-width:549px) and (min-width:380px){
+  *{
+    font-size: 18px;
+  }
+  .navBar ul li a{
+    padding: 2px 15px;
+  }
+  .center{
+    font-size: 1.5rem !important;
+  }
+  .h-primary{
+    font-size: 1.5rem !important;
+  }
+  #home{
+    height: 320px;
+  }
+  #home::before{
+    height: 370px;
+  }
+  /* resizing btn*/
+  #home .btn{
+    font-size: 13px;
+  }
+  /* resizing font */
+  #home p{
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  /* resizing height */
+  .clients-container{
+    height: 275px;
+  }
+  /* resiziing image */
+  .box img{
+    
+    width: 100px !important;
+    height: 100px !important;
+  }
+  /* resizing font */
+  .box p{
+    font-size: 12px;
+  }
+  /* resized margin and padding */
+  .box{
+    padding: 5px;
+    margin: 5px 5px;
+  }
+  /* resized Margin */
+  #services {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 5px;
+  }
+  .container{
+    flex-wrap: wrap !important;
+  }
+  /* resized image's padding */
+  .container img{
+    width: 60px;
+    height: 60px;
+    padding: 10px 15px;
+  }
+  /* Increased Form Width */
+  #contact-box form{
+    width: 80%;
+  }
+  #contact-box input, #contact-box textarea{
+    padding: 2px !important;
+  }
+}
+/* Entered Moblie Section */
+/* and (min-width:310px)  */
+@media screen and (max-width:379px){
+  *{
+    font-size: 18px;
+  }
+  .navBar ul li a{
+    padding: 2px 5px;
+  }
+  .center{
+    font-size: 1.5rem !important;
+  }
+  .h-primary{
+    font-size: 1.5rem !important;
+  }
+  #home{
+    height: 300px;
+    padding: 3px 20px;
+  }
+  #home::before{
+    height: 370px;
+  }
+  /* resizing btn*/
+  #home .btn{
+    font-size: 13px;
+    padding: 4px;
+  }
+  /* resizing font */
+  #home p{
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  /* resizing height */
+  .clients-container{
+    height: 275px;
+  }
+  /* resiziing image */
+  .box img{
+    
+    width: 100px !important;
+    height: 100px !important;
+  }
+  /* resizing font */
+  .box p{
+    font-size: 12px;
+  }
+  /* resized margin and padding */
+  .box{
+    padding: 5px;
+    margin: 5px 5px;
+  }
+  /* resized Margin */
+  #services {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 5px;
+  }
+  .container{
+    flex-wrap: wrap !important;
+  }
+  /* resized image's padding */
+  .container img{
+    width: 60px;
+    height: 60px;
+    padding: 10px 15px;
+  }
+  /* Increased Form Width */
+  #contact-box form{
+    width: 80%;
+  }
+  #contact-box input, #contact-box textarea{
+    padding: 2px !important;
+  }
+}
+/* utility Classes */
+.h-primary {
+  font-size: 2rem;
+  padding: 12px;
+}
+.center {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
